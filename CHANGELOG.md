@@ -1,4 +1,18 @@
 
+## v1.1.3
+
+[compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.1.2...v1.1.3)
+
+### 🩹 Fixes
+
+- CardSets added to alwaysArray ([288a8b5](https://github.com/Ragura/bgg-api-wrapper/commit/288a8b5))
+- Comments can no longer accidently be numbers ([548b7a5](https://github.com/Ragura/bgg-api-wrapper/commit/548b7a5))
+- Small change in fixture ([ab8245e](https://github.com/Ragura/bgg-api-wrapper/commit/ab8245e))
+
+### ❤️ Contributors
+
+- Ragura ([@Ragura](http://github.com/Ragura))
+
 ## v1.1.2
 
 [compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.1.1...v1.1.2)
