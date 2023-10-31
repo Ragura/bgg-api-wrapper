@@ -34,7 +34,7 @@ export function parseFindGameByIds(xmlString: string) {
   // writeFileSync('logs/find-game-by-ids-parsed-xml.json', JSON.stringify(resultParsed, undefined, 2));
   const resultMerged = mergeAttributes(resultParsed)
   // writeFileSync('logs/find-game-by-ids-merged.json', JSON.stringify(resultMerged, undefined, 2));
-  const games = resultMerged.boardgames.boardgame.map(
+  const games: Game[] = resultMerged.boardgames.boardgame.map(
     (game: Record<string, any>) => parseFindGameByIdGame(game)
   )
   // writeFileSync('logs/find-game-by-ids.json', JSON.stringify(games, undefined, 2));
