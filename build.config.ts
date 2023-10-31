@@ -12,6 +12,5 @@ export default defineBuildConfig({
   ],
   alias: {
     '@': resolve(path.dirname(fileURLToPath(import.meta.url)), 'src'),
-    // '@': resolve(__dirname, 'src'),
   },
 });

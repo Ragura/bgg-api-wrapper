@@ -1,7 +1,7 @@
 import { ofetch } from 'ofetch'
-import { mergeAttributes, parsePoll, xmlParser } from '../../utils/parser.js'
-import { renameProperties } from '../../utils/names.js'
-import type { Game } from 'src/types/games.js'
+import { mergeAttributes, parsePoll, xmlParser } from '../../utils/parser'
+import { renameProperties } from '../../utils/names'
+import type { Game } from '../../types/games'
 
 export interface findGameByIdOptions {
   comments?: boolean

@@ -1,3 +1,3 @@
-export { parseFindGameById, parseFindGameByIds } from './games/find-game-by-id.js'
-export { parseSearchGame } from './games/search.js'
-export { parseCollection } from './games/collection.js'
+export { parseFindGameById, parseFindGameByIds } from './games/find-game-by-id'
+export { parseSearchGame } from './games/search'
+export { parseCollection } from './games/collection'

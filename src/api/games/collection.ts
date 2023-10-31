@@ -1,6 +1,6 @@
 import { ofetch } from 'ofetch'
-import { xmlParser , mergeAttributes } from '../../utils/parser'
-import { Collection } from 'src/types/collection'
+import { xmlParser, mergeAttributes } from '../../utils/parser'
+import type { Collection } from '../../types/collection'
 
 interface MergedResult {
   items: {
@@ -29,7 +29,7 @@ function parseItem(item: MergedResultItem) {
   }
 }
 
-export function parseCollection(xmlString: string): Collection {
+export function parseCollection(xmlString: string) {
   const resultParsed = xmlParser.parse(xmlString)
   const mergedItems: MergedResult = mergeAttributes(resultParsed)
   const mergedGames = mergedItems.items.item
