@@ -1,4 +1,16 @@
 
+## v1.1.2
+
+[compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.1.1...v1.1.2)
+
+### 🩹 Fixes
+
+- Properly type return of parseFindGameByIds() ([6d55de7](https://github.com/Ragura/bgg-api-wrapper/commit/6d55de7))
+
+### ❤️ Contributors
+
+- Ragura ([@Ragura](http://github.com/Ragura))
+
 ## v1.1.1
 
 [compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.1.0...v1.1.1)
