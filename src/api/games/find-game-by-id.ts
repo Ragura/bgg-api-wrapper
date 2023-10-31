@@ -1,4 +1,3 @@
-import { writeFileSync } from 'node:fs'
 import { ofetch } from 'ofetch'
 import { mergeAttributes, parsePoll, xmlParser } from '../../utils/parser.js'
 import { renameProperties } from '../../utils/names.js'
@@ -34,11 +33,11 @@ export function parseFindGameByIds(xmlString: string) {
   const resultParsed = xmlParser.parse(xmlString)
   // writeFileSync('logs/find-game-by-ids-parsed-xml.json', JSON.stringify(resultParsed, undefined, 2));
   const resultMerged = mergeAttributes(resultParsed)
-  writeFileSync('logs/find-game-by-ids-merged.json', JSON.stringify(resultMerged, undefined, 2));
+  // writeFileSync('logs/find-game-by-ids-merged.json', JSON.stringify(resultMerged, undefined, 2));
   const games = resultMerged.boardgames.boardgame.map(
     (game: Record<string, any>) => parseFindGameByIdGame(game)
   )
-  writeFileSync('logs/find-game-by-ids.json', JSON.stringify(games, undefined, 2));
+  // writeFileSync('logs/find-game-by-ids.json', JSON.stringify(games, undefined, 2));
   return games
 }
 
@@ -100,7 +99,7 @@ export async function findGameByIds(ids: number[], options: findGameByIdOptions 
   const response = await ofetch<string>(
     `https://www.boardgamegeek.com/xmlapi/boardgame/${ids.join(',')}?${searchParams}`
   )
-  writeFileSync('logs/find-game-by-ids.xml', response);
+  // writeFileSync('logs/find-game-by-ids.xml', response);
   const result = parseFindGameByIds(response)
   return result
 }

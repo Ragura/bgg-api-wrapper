@@ -1,4 +1,3 @@
-import { writeFileSync } from 'node:fs'
 import { ofetch } from 'ofetch'
 import { xmlParser , mergeAttributes } from '../../utils/parser'
 import { Collection } from 'src/types/collection'
@@ -50,6 +49,6 @@ export async function findCollection(userName: string) {
   const response = await ofetch<string>(
     `https://www.boardgamegeek.com/xmlapi/collection/${userName}?${searchParams}`
   )
-  writeFileSync('logs/collection.xml', response)
+  // writeFileSync('logs/collection.xml', response)
   parseCollection(response)
 }
