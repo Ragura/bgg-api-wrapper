@@ -58,6 +58,7 @@ export const alwaysArray = [
   'accessories',
   'videoGames',
   'subdomains',
+  'cardSets',
 ]
 
 /**

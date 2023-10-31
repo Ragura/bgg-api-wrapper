@@ -82,7 +82,7 @@ export interface VideoGame {
 
 export interface CardSet {
   id: number
-  name: string
+  name?: string
 }
 
 export interface SubDomain {
@@ -115,7 +115,7 @@ export interface Game {
   categories: Category[]
   mechanics: Mechanic[]
   podcastEpisodes: PodcastEpisode[]
-  families: Family[]
+  families?: Family[]
   artists: Artist[]
   designers: Designer[]
   graphicDesigners?: GraphicDesigner[]
