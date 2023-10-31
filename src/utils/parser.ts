@@ -20,11 +20,14 @@ export const xmlParser = new XMLParser({
   attributeValueProcessor: (name, val, jPath) => {
     if (jPath.includes('poll.results.result') && name === 'value')
       return undefined
-    if (name === 'numplayers')
-      return undefined
-    if (name === 'username')
+    if (name === 'numplayers' || name === 'username')
       return undefined
     return val
+  },
+  tagValueProcessor: (tagName, tagValue) => {
+    if (tagName === 'comments')
+      return undefined
+    return tagValue
   },
   ignoreAttributes: false,
   ignoreDeclaration: true,
@@ -34,6 +37,7 @@ export const xmlParser = new XMLParser({
     return false
   },
   parseAttributeValue: true,
+  parseTagValue: true,
   textNodeName: 'name',
   transformAttributeName: (attributeName) => transformName(attributeName),
   transformTagName: (tagName) => transformName(tagName),

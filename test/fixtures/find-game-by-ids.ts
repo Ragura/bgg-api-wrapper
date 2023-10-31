@@ -1162,7 +1162,7 @@ export const GAME_RESULT = [
       },
       {
         username: 'aciosek',
-        rating: 7.75,
+        rating: 7.5,
         comment: 'Best party game for me, there is always a lot of fun when playing in it'
       },
       {
@@ -1621,9 +1621,11 @@ export const GAME_RESULT = [
     description: 'A long time ago, in a village far, far away, some disturbed townsfolk decided to destroy their entire town in order to rid themselves of an evil menace (it\'s technically a dog-mouse, but I think it\'s an idiomatic thing).  Anyway, so the villagers rebuilt all the buildings in the town (including their precious outhouses), but forgot to include city walls, a river, or roads.  To rectify this, players lay tiles with one of these three things onto the board, and any building caught underneath them is automatically eliminated, except for outhouses.  When an outhouse would be destroyed, players take a vote on whether to place that particular section.  Each player is trying to retain the most of one type of building, and once all the pieces have been placed the winner is the person with the highest valued buildings still standing.<br/><br/>Wacky, Wacky West re-make description:<br/><br/>Fans of Klaus Teuber will be interested in this remake/redesign of Drunter und Dr&uuml;ber, a 1991 Spiel des Jahres winner.<br/><br/><br/>Just south of nowhere, there\'s the junction of the Mayfair &amp; Rossdorf RR and the Turvy Trunk Line. Springing up from the desert like a tumbleweed lies the eccentric little town of Rossdorf. Like most western towns, Rossdorf has a Land Agent: Guy Dough, the brother of that wicked varmint Black Benny. A shrewd opportunist, Guy\'s done sold all the town land (\'ceptin\' the outhouses) four times over! Every acre in town that ain\'t got an outhouse on it is owned by the miners, the railroads, AND the fort captain. Just about a year ago, miners digging in the shadow of Fort Rossdorf struck the mother lode! But it wasn\'t gold, and it wasn\'t silver. No, my friend, it was just a little spring. Not any ordinary spring, though! It was a torrent of that mind-marbling drink the locals call &quot;Wacky Water!&quot; <br/><br/><br/>Now that water\'s done what the sun and the wind couldn\'t do: it\'s made those landholders brave enough to take matters into their own hands. Now they\'ll use whatever means they can to bowl over the competition and lay claim to the only fertile spots left in town! Now the only thing stoppin\' \'em is the Town Charter Amendment #5, which states: &quot;no landholder may move, remove, or detonate any outhouse without a majority vote of the Town Citizens...&quot; Now one thing\'s for sure: something\'s gonna stink in Rossdorf, purty darn soon.....<br/><br/><br/>In Wacky Wacky West you and your fellow townfolk place track tiles, street tiles, and river tiles hoping to destroy your rivals\' buildings. Every time someone tries to build over a precious outhouse, the town votes! You try to enlist your supporters (represented by cards) to vote with you to stop or encourage the play of certain tiles-perhaps saving some of your buildings or taking out those of your dastardly opponents.<br/><br/>',
     thumbnail: 'https://cf.geekdo-images.com/Jc9Is7OyYz0NdWN_CDBi5g__thumb/img/SY3pxFgAkFbx2o7okAWQdNIpfEY=/fit-in/200x150/filters:strip_icc()/pic786075.jpg',
     image: 'https://cf.geekdo-images.com/Jc9Is7OyYz0NdWN_CDBi5g__original/img/XmlNNTdyuc3L-TIV2xbSda54ldw=/0x0/filters:format(jpeg)/pic786075.jpg',
-    cardSets: {
-      id: 96210
-    },
+    cardSets: [
+      {
+        id: 96210
+      }
+    ],
     honors: [
       {
         name: '1991 Deutscher Spiele Preis Best Family/Adult Game 3rd Place',
@@ -1840,7 +1842,7 @@ export const GAME_RESULT = [
       {
         username: 'altair79',
         rating: 6.5,
-        comment: 15
+        comment: '15'
       },
       {
         username: 'alturniansky',
@@ -1860,7 +1862,7 @@ export const GAME_RESULT = [
       {
         username: 'amortera',
         rating: 7,
-        comment: 7
+        comment: '7'
       },
       {
         username: 'AnakinOU',
@@ -1875,7 +1877,7 @@ export const GAME_RESULT = [
       {
         username: 'Antimage27',
         rating: 9,
-        comment: 334
+        comment: '334'
       },
       {
         username: 'antoinedebruxelles',
@@ -1925,7 +1927,7 @@ export const GAME_RESULT = [
       {
         username: 'Attila',
         rating: 'N/A',
-        comment: 3
+        comment: '3'
       },
       {
         username: 'Audacon',
@@ -2130,7 +2132,7 @@ export const GAME_RESULT = [
       {
         username: 'bresano',
         rating: 'N/A',
-        comment: 0
+        comment: '0'
       },
       {
         username: 'brettspielverein_kuf',
@@ -2170,12 +2172,12 @@ export const GAME_RESULT = [
       {
         username: 'carlosmlisboa',
         rating: 'N/A',
-        comment: 14
+        comment: '14'
       },
       {
         username: 'carlosmlisboa',
         rating: 'N/A',
-        comment: 14
+        comment: '14'
       },
       {
         username: 'CassieB27',
