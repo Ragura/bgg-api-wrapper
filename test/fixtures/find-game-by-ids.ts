@@ -238,7 +238,7 @@ Suffers from runaway leader issues. Can outstay it&#039;s welcome in game length
 Teaching:
 Comment:</comment>
 <comment username="Achire" rating="8">5/13/2018 - First play rating, so subject to change. Very entertaining and fun. It does require a certain type of thinking to program the actions effectively, but it&#039;s not terribly difficult and the mistakes are hilarious. Also, the bot powers really make things more tricky in interesting ways. I need to play it more to really master the strategy of the game, but I can definitely see why this a classic. I was worried it might not seem very interesting after Mechs vs. Minions, but I was mistaken, it&#039;s a very different game and quite special.</comment>
-<comment username="aciosek" rating="7.75">Best party game for me, there is always a lot of fun when playing in it</comment>
+<comment username="aciosek" rating="7.5">Best party game for me, there is always a lot of fun when playing in it</comment>
 <comment username="acolyte" rating="8">One of the first games I ever owned and I still love it.  A classic.</comment>
 <comment username="acooper1004" rating="8">old favourite, but ideally need 4 players</comment>
 <comment username="ACTC" rating="9">Tolles Spiel für Programmierer, oder die die es mal werden wollen ;-) Programmiert euren Roboter, das er auch richtig den Weg findet, aber vertauscht nicht die Richtung und kollidiert möglichst nicht mit anderen, denn das bringt alles durcheinander. Obwohl dann machts erst Spaß ;-)</comment>
