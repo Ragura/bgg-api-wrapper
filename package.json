@@ -1,6 +1,6 @@
 {
   "name": "bgg-api-wrapper",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Parses XML responses from the Boardgamegeek API in an opinionated way.",
   "sideEffects": false,
   "type": "module",
