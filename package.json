@@ -1,0 +1,73 @@
+{
+  "name": "bgg-api-wrapper",
+  "version": "1.0.0",
+  "description": "Parses XML responses from the Boardgamegeek API in an opinionated way.",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "browser": "./dist/index.mjs",
+      "bun": "./dist/index.mjs",
+      "deno": "./dist/index.mjs",
+      "edge-light": "./dist/index.mjs",
+      "edge-routine": "./dist/index.mjs",
+      "lagon": "./dist/index.mjs",
+      "netlify": "./dist/index.mjs",
+      "react-native": "./dist/index.mjs",
+      "wintercg": "./dist/index.mjs",
+      "worker": "./dist/index.mjs",
+      "workerd": "./dist/index.mjs",
+      "node": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.cjs"
+      },
+      "default": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.cjs"
+      }
+    },
+    "./node": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "node.d.ts"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "lint": "eslint --ext .ts .",
+    "lint:fix": "eslint --fix --ext .ts .",
+    "prepack": "bun run build",
+    "play": "bun run playground/index.ts",
+    "release": "bun test && changelogen --release && npm publish && git push --follow-tags",
+    "test": "bun run lint && bun test --coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fast-xml-parser": "^4.2.4",
+    "ofetch": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "bun-types": "^1.0.7",
+    "changelogen": "^0.5.5",
+    "eslint": "^8.52.0",
+    "eslint-config-unjs": "^0.2.1",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0"
+  },
+  "packageManager": "pnpm@8.6.1"
+}

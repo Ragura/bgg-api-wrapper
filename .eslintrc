@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "eslint-config-unjs"
+  ],
+  "rules": {
+    "no-undef": 0,
+    "unicorn/consistent-destructuring": 0,
+    "unicorn/no-await-expression-member": 0,
+    "unicorn/numeric-separators-style": 0,
+    "no-irregular-whitespace": 0,
+    "quotes": ["error", "single"],
+    "indent": ["error", 2],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
+    "unused-imports/no-unused-imports": "error",
+    "no-trailing-spaces": ["error"],
+    "curly": ["error", "multi"]
+  },
+  "plugins": [
+    "unused-imports"
+  ]
+}

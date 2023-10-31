@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext"],
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "noEmit": true,
+    "allowJs": true,
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "types": [
+      "bun-types"
+    ],
+  },
+  "include": [
+    "src",
+    "test",
+    "playground"
+  ]
+}
