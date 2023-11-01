@@ -84,6 +84,11 @@ export function mergeAttributes(
  * @returns Transformed object in the new format
 */
 export function parseSuggestedPlayers(result: RawSuggestedPlayersResult): SuggestedPlayers {
+  if (!Array.isArray(result.results))
+    return {
+      totalVotes: 0,
+      results: [],
+    }
   return {
     results: result.results.map(item => ({
       numPlayers: item.numPlayers,
@@ -101,6 +106,11 @@ export function parseSuggestedPlayers(result: RawSuggestedPlayersResult): Sugges
  * @returns Transformed object in the new format
 */
 export function parseLanguageDependence(result: RawLanguageDependenceResult): LanguageDependence {
+  if (!Array.isArray(result.results.result))
+    return {
+      totalVotes: 0,
+      results: [],
+    }
   return {
     results: result.results.result.map(item => ({
       level: item.level,
@@ -117,6 +127,11 @@ export function parseLanguageDependence(result: RawLanguageDependenceResult): La
  * @returns Transformed object in the new format
 */
 export function parseSuggestedPlayerAge(result: RawSuggestedPlayerAgeResult): SuggestedPlayerAge {
+  if (!Array.isArray(result.results.result))
+    return {
+      totalVotes: 0,
+      results: [],
+    }
   return {
     results: result.results.result.map(item => ({
       age: item.value,
