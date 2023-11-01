@@ -1,4 +1,16 @@
 
+## v1.1.4
+
+[compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.1.3...v1.1.4)
+
+### 🩹 Fixes
+
+- Prevent parser from parsing polls without results ([919e899](https://github.com/Ragura/bgg-api-wrapper/commit/919e899))
+
+### ❤️ Contributors
+
+- Ragura ([@Ragura](http://github.com/Ragura))
+
 ## v1.1.3
 
 [compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.1.2...v1.1.3)
