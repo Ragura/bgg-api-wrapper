@@ -1,7 +1,8 @@
 import { ofetch } from 'ofetch'
-import { mergeAttributes, parsePoll, xmlParser } from '../../utils/parser'
+import { mergeAttributes, parsePoll, parseRatings, xmlParser } from '../../utils/parser'
 import { renameProperties } from '../../utils/names'
 import type { Game } from '../../types/games'
+import { writeLog } from '../../utils/logs'
 
 export interface findGameByIdOptions {
   comments?: boolean
@@ -16,11 +17,11 @@ export interface findGameByIdOptions {
  */
 export function parseFindGameById(xmlString: string) {
   const resultParsed = xmlParser.parse(xmlString)
-  // writeFileSync('logs/find-game-by-id-parsed-xml.json', JSON.stringify(resultParsed, undefined, 2));
+  writeLog('find-game-by-id-parsed-xml', resultParsed)
   const resultMerged = mergeAttributes(resultParsed)
-  // writeFileSync('logs/find-game-by-id-merged.json', JSON.stringify(resultMerged, undefined, 2));
+  writeLog('find-game-by-id-merged.json', resultMerged)
   const game = parseFindGameByIdGame(resultMerged.boardgames.boardgame[0])
-  // writeFileSync('logs/find-game-by-id.json', JSON.stringify(result, undefined, 2));
+  writeLog('find-game-by-id.json', game)
   return game
 }
 
@@ -31,13 +32,13 @@ export function parseFindGameById(xmlString: string) {
  */
 export function parseFindGameByIds(xmlString: string) {
   const resultParsed = xmlParser.parse(xmlString)
-  // writeFileSync('logs/find-game-by-ids-parsed-xml.json', JSON.stringify(resultParsed, undefined, 2));
+  writeLog('find-game-by-ids-parsed-xml.json', resultParsed)
   const resultMerged = mergeAttributes(resultParsed)
-  // writeFileSync('logs/find-game-by-ids-merged.json', JSON.stringify(resultMerged, undefined, 2));
+  writeLog('find-game-by-ids-merged.json', resultMerged)
   const games: Game[] = resultMerged.boardgames.boardgame.map(
     (game: Record<string, any>) => parseFindGameByIdGame(game)
   )
-  // writeFileSync('logs/find-game-by-ids.json', JSON.stringify(games, undefined, 2));
+  writeLog('find-game-by-ids.json', games)
   return games
 }
 
@@ -48,12 +49,14 @@ export function parseFindGameByIds(xmlString: string) {
  */
 export function parseFindGameByIdGame(merged: Record<string, any>): Game {
   const parsedPoll = parsePoll(merged.poll)
-  // writeFileSync('logs/poll.json', JSON.stringify(parsedPoll, undefined, 2));
-  delete merged.poll
+  writeLog('poll.json', parsedPoll)
   merged = {
     ...merged,
     ...parsedPoll,
+    ...(merged.statistics && { ratings: parseRatings(merged.statistics) }),
   }
+  delete merged.poll
+  delete merged.statistics
   const resultRenamedProperties = renameProperties(merged)
   return resultRenamedProperties as Game
 }
@@ -70,13 +73,12 @@ export function parseFindGameByIdGame(merged: Record<string, any>): Game {
 export async function findGameById(id: number, options: findGameByIdOptions = {}) {
   const searchParams = new URLSearchParams({
     ...(options.comments && { comments: '1' }),
-    ...(options.historical && { historical: '1' }),
     ...(options.stats && { stats: '1' }),
   })
   const response = await ofetch<string>(
     `https://www.boardgamegeek.com/xmlapi/boardgame/${id}?${searchParams}`
   )
-  // writeFileSync('logs/find-game-by-id.xml', response);
+  writeLog('find-game-by-id.xml', response, false);
   const result = parseFindGameById(response)
   return result
 }
@@ -93,13 +95,12 @@ export async function findGameById(id: number, options: findGameByIdOptions = {}
 export async function findGameByIds(ids: number[], options: findGameByIdOptions = {}) {
   const searchParams = new URLSearchParams({
     ...(options.comments && { comments: '1' }),
-    ...(options.historical && { historical: '1' }),
     ...(options.stats && { stats: '1' }),
   })
   const response = await ofetch<string>(
     `https://www.boardgamegeek.com/xmlapi/boardgame/${ids.join(',')}?${searchParams}`
   )
-  // writeFileSync('logs/find-game-by-ids.xml', response);
+  writeLog('find-game-by-ids.xml', response, false);
   const result = parseFindGameByIds(response)
   return result
 }

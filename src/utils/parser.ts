@@ -1,4 +1,5 @@
 import { XMLParser } from 'fast-xml-parser'
+import { Ratings, RawRatingsResult } from '../types/ratings'
 import { alwaysArray, transformName } from './names';
 import type {
   LanguageDependence,
@@ -19,6 +20,9 @@ export const xmlParser = new XMLParser({
   attributeNamePrefix: '',
   attributeValueProcessor: (name, val, jPath) => {
     if (jPath.includes('poll.results.result') && name === 'value')
+      return undefined
+    if (jPath.includes('ranks.rank') &&
+      (name === 'value' || name === 'bayesaverage'))
       return undefined
     if (name === 'numplayers' || name === 'username')
       return undefined
@@ -139,6 +143,24 @@ export function parseSuggestedPlayerAge(result: RawSuggestedPlayerAgeResult): Su
     })),
     totalVotes: result.totalVotes,
   }
+}
+
+export function parseRatings(result: RawRatingsResult): Ratings {
+  const ratings = result.ratings
+  const { average, bayesAverage, totalRatings, ranks } = ratings
+  const parsedRanks = ranks.rank.map(rank => ({
+    title: rank.titles.title,
+    description: rank.description,
+    rank: rank.value,
+    bayesAverage: rank.bayesAverage,
+  }))
+  const parsedRatings = {
+    average,
+    bayesAverage,
+    totalRatings,
+    ranks: parsedRanks,
+  }
+  return parsedRatings
 }
 
 /**

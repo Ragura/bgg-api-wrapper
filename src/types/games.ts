@@ -1,4 +1,5 @@
 import { LanguageDependence, SuggestedPlayerAge, SuggestedPlayers } from './poll'
+import { Ratings } from './ratings'
 
 export interface Title {
   title: string
@@ -129,4 +130,5 @@ export interface Game {
   languageDependence?: LanguageDependence
   suggestedPlayerAge?: SuggestedPlayerAge
   comments?: GameComment[]
+  ratings?: Ratings
 }

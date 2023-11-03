@@ -31,7 +31,10 @@ const nameMapping: Record<string, string> = {
   numplayers: 'numPlayers',
   totalvotes: 'totalVotes',
   cardset: 'cardSets',
-  comment: 'comments'
+  comment: 'comments',
+  usersrated: 'totalRatings',
+  friendlyname: 'description',
+  bayesaverage: 'bayesAverage',
 }
 
 /**
@@ -59,6 +62,7 @@ export const alwaysArray = [
   'videoGames',
   'subdomains',
   'cardSets',
+  'rank',
 ]
 
 /**
@@ -101,7 +105,7 @@ const propertyNameMappings: Record<string, {
   videoGames: {
     oldName: 'name',
     newName: 'title',
-  }
+  },
 }
 
 /**
