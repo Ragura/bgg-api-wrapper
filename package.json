@@ -46,7 +46,7 @@
     "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --fix --ext .ts .",
     "prepack": "bun run build",
-    "play": "bun run playground/index.ts",
+    "play": "NODE_ENV=dev bun run playground/index.ts",
     "release": "bun test && changelogen --release && npm publish && git push --follow-tags",
     "test": "bun run lint && bun test --coverage",
     "typecheck": "tsc --noEmit"
