@@ -1,4 +1,20 @@
 
+## v1.2.0
+
+[compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.1.4...v1.2.0)
+
+### 🚀 Enhancements
+
+- Add ratings to parse results ([ecd5af5](https://github.com/Ragura/bgg-api-wrapper/commit/ecd5af5))
+
+### 📦 Build
+
+- Add NODE_ENV to play script ([e8d7eef](https://github.com/Ragura/bgg-api-wrapper/commit/e8d7eef))
+
+### ❤️ Contributors
+
+- Ragura ([@Ragura](http://github.com/Ragura))
+
 ## v1.1.4
 
 [compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.1.3...v1.1.4)
