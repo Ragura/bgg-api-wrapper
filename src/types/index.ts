@@ -9,3 +9,7 @@ export type {
   SuggestedPlayers,
   SuggestedPlayersResult
 } from './poll'
+export type {
+  Ratings,
+  Rank
+} from './ratings'
