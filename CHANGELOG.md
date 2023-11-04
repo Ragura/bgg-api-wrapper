@@ -1,4 +1,20 @@
 
+## v1.2.1
+
+[compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.2.0...v1.2.1)
+
+### 🩹 Fixes
+
+- Export ratings types ([b610d62](https://github.com/Ragura/bgg-api-wrapper/commit/b610d62))
+
+### 🏡 Chore
+
+- Update JSDoc ([3f09893](https://github.com/Ragura/bgg-api-wrapper/commit/3f09893))
+
+### ❤️ Contributors
+
+- Ragura ([@Ragura](http://github.com/Ragura))
+
 ## v1.2.0
 
 [compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.1.4...v1.2.0)
