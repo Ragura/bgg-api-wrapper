@@ -66,7 +66,6 @@ export function parseFindGameByIdGame(merged: Record<string, any>): Game {
  * @param id The id of the board game to find.
  * @param options Additional options for the search
  * @param options.comments Whether to include comments in the result.
- * @param options.historical Whether to include historical data in the result.
  * @param options.stats Whether to include stats in the result.
  * @returns A Promise that resolves to the found board game.
  */
@@ -88,7 +87,6 @@ export async function findGameById(id: number, options: findGameByIdOptions = {}
  * @param ids The ids of the board games to find.
  * @param options Additional options for the search
  * @param options.comments Whether to include comments in the result.
- * @param options.historical Whether to include historical data in the result.
  * @param options.stats Whether to include stats in the result.
  * @returns A Promise that resolves to the found board game.
  */
