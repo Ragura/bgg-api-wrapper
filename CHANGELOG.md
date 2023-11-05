@@ -1,4 +1,17 @@
 
+## v1.2.3
+
+[compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.2.2...v1.2.3)
+
+### 🩹 Fixes
+
+- Added missing inbound property to expansions ([1d892d8](https://github.com/Ragura/bgg-api-wrapper/commit/1d892d8))
+- Inbound property should be optional ([4c09632](https://github.com/Ragura/bgg-api-wrapper/commit/4c09632))
+
+### ❤️ Contributors
+
+- Ragura ([@Ragura](http://github.com/Ragura))
+
 ## v1.2.2
 
 [compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.2.1...v1.2.2)
