@@ -9,6 +9,7 @@ describe('language parser', () => {
       average: 7.06172,
       bayesAverage: 6.90163,
       totalRatings: 23716,
+      averageWeight: 2.4291,
       ranks: [
         {
           description: 'Board Game Rank',

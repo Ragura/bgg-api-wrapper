@@ -35,6 +35,7 @@ const nameMapping: Record<string, string> = {
   usersrated: 'totalRatings',
   friendlyname: 'description',
   bayesaverage: 'bayesAverage',
+  averageweight: 'averageWeight',
 }
 
 /**

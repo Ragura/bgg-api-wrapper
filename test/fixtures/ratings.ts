@@ -39,7 +39,7 @@ export const MERGED_RATINGS = {
     wishing: 2805,
     numcomments: 5650,
     numweights: 1741,
-    averageweight: 2.4291
+    averageWeight: 2.4291
   },
   page: 1
 }

@@ -147,7 +147,7 @@ export function parseSuggestedPlayerAge(result: RawSuggestedPlayerAgeResult): Su
 
 export function parseRatings(result: RawRatingsResult): Ratings {
   const ratings = result.ratings
-  const { average, bayesAverage, totalRatings, ranks } = ratings
+  const { average, bayesAverage, totalRatings, averageWeight, ranks } = ratings
   const parsedRanks = ranks.rank.map(rank => ({
     title: rank.titles.title,
     description: rank.description,
@@ -158,6 +158,7 @@ export function parseRatings(result: RawRatingsResult): Ratings {
     average,
     bayesAverage,
     totalRatings,
+    averageWeight,
     ranks: parsedRanks,
   }
   return parsedRatings

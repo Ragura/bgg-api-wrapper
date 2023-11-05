@@ -15,16 +15,16 @@ export type RawRatingsResult = {
           bayesAverage: number
         }[]
       }
+      stddev: number
+      median: number
+      owned: number
+      trading: number
+      wanting: number
+      wishing: number
+      numcomments: number
+      numweights: number
+      averageWeight: number
     }
-    stddev: number
-    median: number
-    owned: number
-    trading: number
-    wanting: number
-    wishing: number
-    numcomments: number
-    numweights: number
-    averageweight: number
   page?: number
 }
 
@@ -33,6 +33,7 @@ export interface Ratings {
   average: number
   bayesAverage: number
   ranks: Rank[]
+  averageWeight: number
 }
 
 export interface Rank {
