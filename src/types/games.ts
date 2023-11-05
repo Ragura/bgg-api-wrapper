@@ -68,6 +68,7 @@ export interface Implementation {
 
 export interface Expansion {
   id: number
+  inbound: boolean
   title: string
 }
 
