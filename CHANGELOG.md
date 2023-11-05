@@ -1,4 +1,16 @@
 
+## v1.2.2
+
+[compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.2.1...v1.2.2)
+
+### 🩹 Fixes
+
+- Add averageWeight to ratings ([73d1876](https://github.com/Ragura/bgg-api-wrapper/commit/73d1876))
+
+### ❤️ Contributors
+
+- Ragura ([@Ragura](http://github.com/Ragura))
+
 ## v1.2.1
 
 [compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.2.0...v1.2.1)
