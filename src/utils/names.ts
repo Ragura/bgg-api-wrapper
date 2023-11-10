@@ -64,6 +64,7 @@ export const alwaysArray = [
   'subdomains',
   'cardSets',
   'rank',
+  'expansions',
 ]
 
 /**
