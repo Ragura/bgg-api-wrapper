@@ -1,4 +1,16 @@
 
+## v1.2.4
+
+[compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.2.3...v1.2.4)
+
+### 🩹 Fixes
+
+- Expansions must always be array ([caeebac](https://github.com/Ragura/bgg-api-wrapper/commit/caeebac))
+
+### ❤️ Contributors
+
+- Ragura ([@Ragura](http://github.com/Ragura))
+
 ## v1.2.3
 
 [compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.2.2...v1.2.3)
