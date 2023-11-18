@@ -1,4 +1,16 @@
 
+## v1.3.0
+
+[compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.2.4...v1.3.0)
+
+### 🚀 Enhancements
+
+- Add status to collection games ([6a7864c](https://github.com/Ragura/bgg-api-wrapper/commit/6a7864c))
+
+### ❤️ Contributors
+
+- Ragura ([@Ragura](http://github.com/Ragura))
+
 ## v1.2.4
 
 [compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.2.3...v1.2.4)
