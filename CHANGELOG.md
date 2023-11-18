@@ -1,4 +1,16 @@
 
+## v1.3.1
+
+[compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.3.0...v1.3.1)
+
+### 🩹 Fixes
+
+- Empty results in polls no longer cause errors ([c66e6ea](https://github.com/Ragura/bgg-api-wrapper/commit/c66e6ea))
+
+### ❤️ Contributors
+
+- Ragura ([@Ragura](http://github.com/Ragura))
+
 ## v1.3.0
 
 [compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.2.4...v1.3.0)
