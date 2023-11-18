@@ -1,13 +1,13 @@
-import { findGameById } from '../src/api/games/find-game-by-id';
+import { findCollection } from '../src/api/games/collection';
 
 // findGameByIds([18, 19], {
 //   comments: true,
 //   historical: true,
 //   stats: true,
 // })
-await findGameById(396989, {
-  comments: true,
-  stats: true,
-})
+// await findGameById(396989, {
+//   comments: true,
+//   stats: true,
+// })
 // findGame('stroganov')
-// findCollection('vanskillz')
+await findCollection('vanskillz')

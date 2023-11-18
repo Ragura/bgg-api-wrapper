@@ -11,6 +11,17 @@ import type {
   SuggestedPlayers
 } from 'src/types/poll';
 
+const statusFields = [
+  'own',
+  'prevowned',
+  'fortrade',
+  'want',
+  'wanttoplay',
+  'wanttobuy',
+  'wishlist',
+  'preordered',
+]
+
 /**
  * An instance of the XMLParser class with customized options for parsing XML
  * data coming back from the BGG API.
@@ -21,11 +32,15 @@ export const xmlParser = new XMLParser({
   attributeValueProcessor: (name, val, jPath) => {
     if (jPath.includes('poll.results.result') && name === 'value')
       return undefined
+    if (jPath.includes('stats.results.result') && name === 'value')
+      return undefined
     if (jPath.includes('ranks.rank') &&
       (name === 'value' || name === 'bayesaverage'))
       return undefined
     if (name === 'numplayers' || name === 'username')
       return undefined
+    if ((statusFields as unknown[]).includes(name))
+      return !!Number(val)
     return val
   },
   tagValueProcessor: (tagName, tagValue) => {

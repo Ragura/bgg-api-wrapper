@@ -1,6 +1,7 @@
 import { ofetch } from 'ofetch'
 import { xmlParser, mergeAttributes } from '../../utils/parser'
-import type { Collection } from '../../types/collection'
+import type { Collection, Status } from '../../types/collection'
+import { writeLog } from '../../utils/logs'
 
 interface MergedResult {
   items: {
@@ -17,6 +18,7 @@ interface MergedResultItem {
   yearPublished: number
   image: string
   thumbnail: string
+  status: Status & { lastModified: string }
 }
 
 function parseItem(item: MergedResultItem) {
@@ -26,29 +28,29 @@ function parseItem(item: MergedResultItem) {
     yearPublished: item.yearPublished,
     image: item.image,
     thumbnail: item.thumbnail,
+    status: item.status,
   }
 }
 
 export function parseCollection(xmlString: string) {
   const resultParsed = xmlParser.parse(xmlString)
+  writeLog('collection-parsed-xml.json', resultParsed);
   const mergedItems: MergedResult = mergeAttributes(resultParsed)
+  writeLog('collection-merged.json', mergedItems);
   const mergedGames = mergedItems.items.item
   const games = mergedGames.map((item: MergedResultItem) => parseItem(item))
   const collection: Collection = {
     numberOfGames: mergedItems.items.totalitems,
     games,
   }
-  // writeFileSync('logs/collection.json', JSON.stringify(collection, undefined, 2));
+  writeLog('collection.json', collection);
   return collection
 }
 
 export async function findCollection(userName: string) {
-  const searchParams = new URLSearchParams({
-    own: '1',
-  })
   const response = await ofetch<string>(
-    `https://www.boardgamegeek.com/xmlapi/collection/${userName}?${searchParams}`
+    `https://www.boardgamegeek.com/xmlapi/collection/${userName}?own,preordered=1`
   )
-  // writeFileSync('logs/collection.xml', response)
+  writeLog('collection.xml', response, false);
   parseCollection(response)
 }

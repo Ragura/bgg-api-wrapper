@@ -74,3 +74,69 @@ preordered="0" lastmodified="2023-03-04 10:10:37" />
 </item>
 </items>
 `
+
+export const SINGLE_GAME = {
+  numberOfGames: 1,
+  games: [
+    {
+      id: 173346,
+      title: '7 Wonders Duel',
+      yearPublished: 2021,
+      image: 'https://cf.geekdo-images.com/zdWuX3vm_DziVdTwTQh4mg__original/img/rcsOrUHL8HdYKDt6WNl8rO5ONUQ=/0x0/filters:format(jpeg)/pic6617327.jpg',
+      thumbnail: 'https://cf.geekdo-images.com/zdWuX3vm_DziVdTwTQh4mg__thumb/img/EDUqlbAQB_5SrdZDhdndHSwAc0s=/fit-in/200x150/filters:strip_icc()/pic6617327.jpg',
+      status: {
+        owned: true,
+        previouslyOwned: false,
+        forTrade: false,
+        want: false,
+        wantToPlay: false,
+        wantToBuy: false,
+        wishlist: false,
+        preordered: false,
+        lastModified: '2023-03-04 10:10:37',
+      }
+    },
+  ],
+}
+
+export const MULTIPLE_GAMES = {
+  numberOfGames: 2,
+  games: [
+    {
+      id: 173346,
+      title: '7 Wonders Duel',
+      yearPublished: 2021,
+      image: 'https://cf.geekdo-images.com/zdWuX3vm_DziVdTwTQh4mg__original/img/rcsOrUHL8HdYKDt6WNl8rO5ONUQ=/0x0/filters:format(jpeg)/pic6617327.jpg',
+      thumbnail: 'https://cf.geekdo-images.com/zdWuX3vm_DziVdTwTQh4mg__thumb/img/EDUqlbAQB_5SrdZDhdndHSwAc0s=/fit-in/200x150/filters:strip_icc()/pic6617327.jpg',
+      status: {
+        owned: true,
+        previouslyOwned: false,
+        forTrade: false,
+        want: false,
+        wantToPlay: false,
+        wantToBuy: false,
+        wishlist: false,
+        preordered: false,
+        lastModified: '2023-03-04 10:10:37',
+      }
+    },
+    {
+      id: 173346,
+      title: '7 Wonders Duel',
+      yearPublished: 2021,
+      image: 'https://cf.geekdo-images.com/zdWuX3vm_DziVdTwTQh4mg__original/img/rcsOrUHL8HdYKDt6WNl8rO5ONUQ=/0x0/filters:format(jpeg)/pic6617327.jpg',
+      thumbnail: 'https://cf.geekdo-images.com/zdWuX3vm_DziVdTwTQh4mg__thumb/img/EDUqlbAQB_5SrdZDhdndHSwAc0s=/fit-in/200x150/filters:strip_icc()/pic6617327.jpg',
+      status: {
+        owned: true,
+        previouslyOwned: false,
+        forTrade: false,
+        want: false,
+        wantToPlay: false,
+        wantToBuy: false,
+        wishlist: false,
+        preordered: false,
+        lastModified: '2023-03-04 10:10:37',
+      }
+    },
+  ],
+}

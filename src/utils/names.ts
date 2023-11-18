@@ -36,6 +36,15 @@ const nameMapping: Record<string, string> = {
   friendlyname: 'description',
   bayesaverage: 'bayesAverage',
   averageweight: 'averageWeight',
+  own: 'owned',
+  prevowned: 'previouslyOwned',
+  fortrade: 'forTrade',
+  want: 'want',
+  wanttoplay: 'wantToPlay',
+  wanttobuy: 'wantToBuy',
+  wishlist: 'wishlist',
+  preordered: 'preordered',
+  lastmodified: 'lastModified',
 }
 
 /**
