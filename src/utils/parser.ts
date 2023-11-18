@@ -125,7 +125,7 @@ export function parseSuggestedPlayers(result: RawSuggestedPlayersResult): Sugges
  * @returns Transformed object in the new format
 */
 export function parseLanguageDependence(result: RawLanguageDependenceResult): LanguageDependence {
-  if (!Array.isArray(result.results.result))
+  if (!Array.isArray(result.results?.result))
     return {
       totalVotes: 0,
       results: [],
@@ -146,7 +146,7 @@ export function parseLanguageDependence(result: RawLanguageDependenceResult): La
  * @returns Transformed object in the new format
 */
 export function parseSuggestedPlayerAge(result: RawSuggestedPlayerAgeResult): SuggestedPlayerAge {
-  if (!Array.isArray(result.results.result))
+  if (!Array.isArray(result.results?.result))
     return {
       totalVotes: 0,
       results: [],
