@@ -1,4 +1,16 @@
 
+## v1.3.2
+
+[compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.3.1...v1.3.2)
+
+### 🏡 Chore
+
+- Export CollectionStatus type ([06b8d5c](https://github.com/Ragura/bgg-api-wrapper/commit/06b8d5c))
+
+### ❤️ Contributors
+
+- Ragura ([@Ragura](http://github.com/Ragura))
+
 ## v1.3.1
 
 [compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.3.0...v1.3.1)
