@@ -1,4 +1,4 @@
-export type Status = {
+export type CollectionStatus = {
   owned: boolean
   previouslyOwned: boolean
   forTrade: boolean
@@ -7,6 +7,7 @@ export type Status = {
   wantToBuy: boolean
   wishlist: boolean
   preordered: boolean
+  lastModified: string
 };
 
 export interface Collection {
@@ -20,5 +21,5 @@ export interface CollectionItem {
   yearPublished: number
   image: string
   thumbnail: string
-  status: Status & { lastModified: string }
+  status: CollectionStatus
 }

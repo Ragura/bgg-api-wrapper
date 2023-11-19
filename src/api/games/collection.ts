@@ -1,6 +1,6 @@
 import { ofetch } from 'ofetch'
 import { xmlParser, mergeAttributes } from '../../utils/parser'
-import type { Collection, Status } from '../../types/collection'
+import type { Collection, CollectionStatus } from '../../types/collection'
 import { writeLog } from '../../utils/logs'
 
 interface MergedResult {
@@ -18,7 +18,7 @@ interface MergedResultItem {
   yearPublished: number
   image: string
   thumbnail: string
-  status: Status & { lastModified: string }
+  status: CollectionStatus
 }
 
 function parseItem(item: MergedResultItem) {

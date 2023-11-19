@@ -1,5 +1,5 @@
 export type * from './games'
-export type { Collection, CollectionItem } from './collection'
+export type { Collection, CollectionItem, CollectionStatus } from './collection'
 export type {
   Poll,
   LanguageDependence,

@@ -1,6 +1,5 @@
 import { XMLParser } from 'fast-xml-parser'
 import { Ratings, RawRatingsResult } from '../types/ratings'
-import { alwaysArray, transformName } from './names';
 import type {
   LanguageDependence,
   Poll,
@@ -9,7 +8,8 @@ import type {
   RawSuggestedPlayersResult,
   SuggestedPlayerAge,
   SuggestedPlayers
-} from 'src/types/poll';
+} from '../types/poll';
+import { alwaysArray, transformName } from './names';
 
 const statusFields = [
   'own',
