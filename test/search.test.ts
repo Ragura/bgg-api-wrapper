@@ -12,7 +12,10 @@ describe('search game parser', () => {
     expect(result).toEqual([
       {
         id: 396989,
-        title: 'Evenfall',
+        titles: [{
+          title: 'Evenfall',
+          primary: true,
+        }],
         yearPublished: 2023
       }
     ])
@@ -22,12 +25,12 @@ describe('search game parser', () => {
     expect(result).toEqual([
       {
         id: 323156,
-        title: 'Stroganov',
+        titles: [{ title: 'Stroganov', primary: true }],
         yearPublished: 2021
       },
       {
         id: 388170,
-        title: 'Stroganov: Big Box',
+        titles: [{ title: 'Stroganov: Big Box', primary: true }],
         yearPublished: 2024
       },
     ])

@@ -1,5 +1,6 @@
 export type * from './games'
 export type { Collection, CollectionItem, CollectionStatus } from './collection'
+export type { GameSearchResult } from './search'
 export type {
   Poll,
   LanguageDependence,

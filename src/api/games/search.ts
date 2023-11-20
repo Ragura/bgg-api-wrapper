@@ -1,11 +1,8 @@
 import { ofetch } from 'ofetch'
 import { mergeAttributes, xmlParser } from '../../utils/parser'
-
-interface GameSearchResult {
-  id: number
-  title: string
-  yearPublished: number
-}
+import { GameSearchResult } from '../../types/search'
+import { Title } from '../../types/games'
+import { renameProperties } from '../../utils/names'
 
 interface MergedResult {
   boardgames: {
@@ -15,21 +12,8 @@ interface MergedResult {
 
 interface MergedResultGame {
   id: number
-  titles: Array<{
-    name: string
-    primary?: boolean
-  }>,
+  name: Array<Title>,
   yearPublished: number
-}
-
-function parseBoardGame(boardGame: MergedResultGame) {
-  return {
-    id: boardGame.id,
-    title: typeof boardGame.titles[0] === 'string'
-      ? boardGame.titles[0]
-      : boardGame.titles[0].name,
-    yearPublished: boardGame.yearPublished,
-  }
 }
 
 export function parseSearchGame(xmlString: string): GameSearchResult[] {
@@ -39,11 +23,10 @@ export function parseSearchGame(xmlString: string): GameSearchResult[] {
     return []
 
   // writeFileSync('logs/search-merged.json', JSON.stringify(resultMerged, undefined, 2));
-  const games = resultMerged.boardgames.boardgame.map(
-    (boardGame: MergedResultGame) => parseBoardGame(boardGame)
-  )
+  const games = resultMerged.boardgames.boardgame
   // writeFileSync('logs/search.json', JSON.stringify(games, undefined, 2));
-  return games
+  const resultRenamedProperties = games.map(game => renameProperties(game))
+  return resultRenamedProperties as GameSearchResult[]
 }
 
 export async function findGame(name: string) {

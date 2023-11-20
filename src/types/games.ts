@@ -4,7 +4,7 @@ import { Ratings } from './ratings'
 export interface Title {
   title: string
   primary?: boolean
-  sortIndex: number
+  sortIndex?: number
 }
 
 export interface Publisher {
