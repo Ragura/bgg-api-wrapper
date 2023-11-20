@@ -1,4 +1,16 @@
 
+## v1.3.3
+
+[compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.3.2...v1.3.3)
+
+### 🩹 Fixes
+
+- Searched games contain multiple titles ([6df19dc](https://github.com/Ragura/bgg-api-wrapper/commit/6df19dc))
+
+### ❤️ Contributors
+
+- Ragura ([@Ragura](http://github.com/Ragura))
+
 ## v1.3.2
 
 [compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.3.1...v1.3.2)
