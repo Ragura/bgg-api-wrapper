@@ -107,7 +107,7 @@ export interface Game {
   minPlayTime: number
   maxPlayTime: number
   age: number
-  titles: Title[] | string
+  titles: Title[]
   description: string
   thumbnail: string
   image: string
