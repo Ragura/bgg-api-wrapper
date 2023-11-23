@@ -1,4 +1,16 @@
 
+## v1.3.4
+
+[compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.3.3...v1.3.4)
+
+### 🩹 Fixes
+
+- Type of titles is always array ([8063d9f](https://github.com/Ragura/bgg-api-wrapper/commit/8063d9f))
+
+### ❤️ Contributors
+
+- Ragura ([@Ragura](http://github.com/Ragura))
+
 ## v1.3.3
 
 [compare changes](https://github.com/Ragura/bgg-api-wrapper/compare/v1.3.2...v1.3.3)
